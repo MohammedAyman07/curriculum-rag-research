@@ -1,0 +1,16 @@
+query_id,question,relevant_doc_ids,retrieved_doc_ids,precision_at_5,recall_at_5,mrr,median_query_latency_ms
+Q001,How does an algorithm's running time change as input size increases?,P001,P001|P002|P040|P028|P004,0.2,1.0,1.0,17.671987000028366
+Q004,Why can an array element be accessed directly using its index?,P004,P004|P034|P026|P028|P011,0.2,1.0,1.0,29.397195000001375
+Q006,Which linked list supports traversal in both directions?,P006,P006|P005|P007|P016|P036,0.2,1.0,1.0,67.71197400001938
+Q008,Which principle explains why the latest stack element is removed first?,P008,P008|P009|P010|P026|P004,0.2,1.0,1.0,89.61599499997419
+Q010,Where does a queue insert new elements and remove existing elements?,P010,P010|P011|P040|P004|P025,0.2,1.0,1.0,60.15806400000656
+Q013,How many children can a node have in a binary tree?,P013,P013|P014|P015|P016|P033,0.2,1.0,1.0,55.59116599999925
+Q015,What balance condition does an AVL tree maintain at each node?,P015,P015|P014|P016|P023|P013,0.2,1.0,1.0,67.5511379999989
+Q018,"What are the main components of a graph, and how can graphs be classified?",P017,P017|P021|P018|P019|P020,0.2,1.0,1.0,64.43101600001455
+Q020,Which graph traversal visits nearby vertices before exploring more distant ones?,P019,P019|P016|P020|P017|P018,0.2,1.0,1.0,55.870109000011325
+Q022,How does DFS explore a graph and then return to earlier vertices?,P020,P019|P020|P018|P017|P023,0.2,1.0,0.5,72.52519100001109
+Q025,How does Prim's algorithm decide which edge to add to its growing tree?,P022,P022|P021|P023|P016|P014,0.2,1.0,1.0,32.849801999986994
+Q027,Which tree structure stores words by sharing prefixes and supports autocomplete?,P024,P024|P013|P014|P015|P016,0.2,1.0,1.0,63.122124000017266
+Q031,How does Merge Sort use the divide-and-conquer approach?,P028,P028|P031|P026|P025|P030,0.2,1.0,1.0,44.523497000000134
+Q038,Why must a collection be sorted before applying ordinary binary search?,P033,P033|P030|P014|P032|P036,0.2,1.0,1.0,34.06467299998894
+Q040,How does a hash function determine where a key is stored in a hash table?,P034,P034|P035|P039|P038|P040,0.2,1.0,1.0,29.66063900004201
