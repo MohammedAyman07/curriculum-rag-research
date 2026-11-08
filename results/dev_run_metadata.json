@@ -7,9 +7,12 @@
   "passage_count": 40,
   "query_count": 60,
   "development_query_count": 15,
+  "evaluated_split": "dev",
+  "evaluated_query_count": 15,
   "test_query_count": 45,
   "test_queries_scored": false,
   "shared_relevant_passage_ids_across_splits": 0,
+  "author_passage_content_review": "completed_all_40",
   "author_relevance_review": "completed_all_60",
   "independent_reviewer_confirmation": "pending",
   "results_status": "preliminary_author_reviewed_labels"
