@@ -1,16 +1,16 @@
 query_id,question,relevant_doc_ids,retrieved_doc_ids,precision_at_5,recall_at_5,mrr,median_query_latency_ms
-Q001,How does an algorithm's running time change as input size increases?,P001,P001|P002|P040|P028|P004,0.2,1.0,1.0,11.158997999984877
-Q013,How many children can a node have in a binary tree?,P013,P013|P014|P015|P016|P033,0.2,1.0,1.0,11.169937999994772
-Q016,In which tree traversal is the root processed between its left and right subtrees?,P016,P016|P013|P015|P014|P020,0.2,1.0,1.0,11.85409999999365
-Q017,What is the difference between preorder and postorder traversal?,P016,P016|P006|P005|P007|P008,0.2,1.0,1.0,11.729930000001332
-Q019,How much memory does an adjacency matrix need for a graph with V vertices?,P018,P018|P019|P017|P020|P021,0.2,1.0,1.0,11.874648999992132
-Q025,How does Prim's algorithm decide which edge to add to its growing tree?,P022,P022|P021|P023|P016|P014,0.2,1.0,1.0,12.130134000017279
-Q026,How does Kruskal's algorithm avoid adding an edge that creates a cycle?,P023,P023|P022|P021|P007|P018,0.2,1.0,1.0,12.193039999999655
-Q034,What happens to equal-key records when a stable sorting algorithm is used?,P031,P031|P028|P034|P025|P036,0.2,1.0,1.0,11.688082000006261
-Q035,"Which sorting algorithms are commonly stable, and which are generally unstable?",P031,P031|P028|P023|P025|P030,0.2,1.0,1.0,11.717095000022937
-Q041,What happens when two different keys produce the same hash-table index?,P035,P035|P034|P036|P040|P038,0.2,1.0,1.0,11.193722999990996
-Q046,Why might a hash table need to be rebuilt with a larger capacity?,P040,P034|P040|P038|P035|P039,0.2,1.0,0.5,11.134803000004467
-Q050,How do Prim's and Kruskal's algorithms construct a minimum spanning tree differently?,P022|P023,P021|P022|P023|P014|P016,0.4,1.0,0.5,12.26277000000664
-Q053,"How do collisions and a high load factor affect a hash table, and why is rehashing useful?",P035|P040,P040|P035|P034|P039|P036,0.4,1.0,1.0,12.773218999996061
-Q056,How does an adjacency matrix represent connections between graph vertices?,P018,P018|P017|P019|P023|P021,0.2,1.0,1.0,11.261087000008274
-Q060,What is the difference between the structure of a binary tree and the order used to visit its nodes?,P013|P016,P013|P014|P015|P016|P005,0.4,1.0,1.0,12.436093000019355
+Q001,How does an algorithm's running time change as input size increases?,P001,P001|P002|P040|P004|P028,0.2,1.0,1.0,10.989934000008361
+Q013,How many children can a node have in a binary tree?,P013,P013|P014|P015|P016|P033,0.2,1.0,1.0,11.147276000002648
+Q016,In which tree traversal is the root processed between its left and right subtrees?,P016,P016|P013|P015|P014|P020,0.2,1.0,1.0,11.607832999999346
+Q017,What is the difference between preorder and postorder traversal?,P016,P016|P006|P005|P007|P008,0.2,1.0,1.0,11.564000999996438
+Q019,How much memory does an adjacency matrix need for a graph with V vertices?,P018,P018|P019|P017|P020|P021,0.2,1.0,1.0,11.731873000002224
+Q025,How does Prim's algorithm decide which edge to add to its growing tree?,P022,P022|P021|P023|P016|P014,0.2,1.0,1.0,11.999391000003357
+Q026,How does Kruskal's algorithm avoid adding an edge that creates a cycle?,P023,P023|P022|P021|P007|P018,0.2,1.0,1.0,12.086072000002446
+Q034,What happens to equal-key records when a stable sorting algorithm is used?,P031,P031|P028|P034|P023|P025,0.2,1.0,1.0,11.642797999996901
+Q035,"Which sorting algorithms are commonly stable, and which are generally unstable?",P031,P031|P028|P023|P033|P025,0.2,1.0,1.0,11.514078000004702
+Q041,What happens when two different keys produce the same hash-table index?,P035,P035|P034|P036|P040|P038,0.2,1.0,1.0,10.99972100000457
+Q046,Why might a hash table need to be rebuilt with a larger capacity?,P040,P034|P040|P038|P035|P039,0.2,1.0,0.5,11.053551999992806
+Q050,How do Prim's and Kruskal's algorithms construct a minimum spanning tree differently?,P022|P023,P021|P022|P023|P014|P016,0.4,1.0,0.5,11.986356999997838
+Q053,"How do collisions and a high load factor affect a hash table, and why is rehashing useful?",P035|P040,P040|P035|P034|P039|P036,0.4,1.0,1.0,12.556015999990677
+Q056,How does an adjacency matrix represent connections between graph vertices?,P018,P018|P017|P019|P023|P021,0.2,1.0,1.0,11.012917000002176
+Q060,What is the difference between the structure of a binary tree and the order used to visit its nodes?,P013|P016,P013|P014|P016|P015|P005,0.4,1.0,1.0,12.097593999996548

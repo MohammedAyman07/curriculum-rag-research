@@ -1,2 +1,2 @@
 Method,Precision@5,Recall@5,MRR,Hit@1,Median Query Latency (ms),Index Creation Time (seconds),Model,Device,Model Loading Time (seconds),Document Embedding Time (seconds),RRF Constant
-Hybrid RRF,0.24000000000000002,1.0,0.9333333333333333,0.8666666666666667,11.729930000001332,,sentence-transformers/all-MiniLM-L6-v2,cpu,7.272562668999996,0.4953820300000018,60.0
+Hybrid RRF,0.24000000000000002,1.0,0.9333333333333333,0.8666666666666667,11.607832999999346,,sentence-transformers/all-MiniLM-L6-v2,cpu,2.0991119389999966,0.7150821980000046,60.0
