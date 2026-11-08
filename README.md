@@ -34,8 +34,9 @@ These are author reviews, not independent annotations. **Independent reviewer co
 ## Evaluation protocol
 
 - Development evaluation uses only the 15 development questions.
-- Final held-out evaluation uses the 45 test questions separately.
-- Test metrics must not be used to tune retrieval settings; any later methodological changes should be documented and evaluated on a new holdout set.
+- Final held-out evaluation uses the 45 test questions separately. In GitHub Actions, open **Actions → Run retrieval evaluation → Run workflow**, select `test`, and start the workflow.
+- The script writes split-specific predictions, metrics, comparison, error analysis, and run metadata. Test outputs use the `test_*` filenames and do not overwrite development outputs.
+- Do not use test metrics to tune retrieval settings. If you change the corpus, labels, model, or retrieval configuration after seeing test results, treat the 45 questions as no longer an untouched test set and create a new holdout set for another final evaluation.
 - Results should be interpreted as preliminary given the small corpus and pending independent review.
 
 ## Technologies

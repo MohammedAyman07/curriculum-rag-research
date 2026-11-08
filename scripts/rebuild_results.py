@@ -377,8 +377,12 @@ def main(split: str = "dev") -> None:
 
     print(f"{split.title()} experiment evaluation completed.")
     print(f"Passages: {len(passages)}")
-    print(f"Development queries scored in this run: {int(split == \"dev\") * len(evaluation_queries)}")
-    print(f"Test queries scored in this run: {int(split == \"test\") * len(evaluation_queries)}")
+    if split == "dev":
+        print(f"Development queries scored: {len(evaluation_queries)}")
+        print("Held-out test queries scored: 0")
+    else:
+        print("Development queries scored: 0")
+        print(f"Held-out test queries scored: {len(evaluation_queries)}")
     print(summaries[
         ["Method", "Precision@5", "Recall@5", "MRR", "Hit@1",
          "Median Query Latency (ms)"]

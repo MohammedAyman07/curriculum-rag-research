@@ -1,7 +1,16 @@
-name: Rebuild development retrieval results
+name: Run retrieval evaluation
 
 on:
   workflow_dispatch:
+    inputs:
+      split:
+        description: "Choose the evaluation split"
+        required: true
+        type: choice
+        options:
+          - dev
+          - test
+        default: dev
   push:
     branches:
       - main
@@ -16,13 +25,15 @@ permissions:
   contents: write
 
 concurrency:
-  group: curriculumrag-dev-rebuild
+  group: curriculumrag-retrieval-evaluation
   cancel-in-progress: false
 
 jobs:
   rebuild:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      EVAL_SPLIT: ${{ github.event.inputs.split || 'dev' }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -39,17 +50,17 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
-      - name: Rebuild development-only results
-        run: python scripts/rebuild_results.py
+      - name: Evaluate selected split
+        run: python scripts/rebuild_results.py --split "$EVAL_SPLIT"
 
       - name: Commit refreshed results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add results/*.csv results/dev_run_metadata.json
+          git add results/
           if git diff --cached --quiet; then
             echo "No result changes to commit."
           else
-            git commit -m "Rebuild development results using grouped split"
+            git commit -m "Rebuild ${EVAL_SPLIT} retrieval results"
             git push
           fi
