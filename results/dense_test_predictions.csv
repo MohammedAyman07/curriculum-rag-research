@@ -1,0 +1,46 @@
+query_id,question,relevant_doc_ids,retrieved_doc_ids,precision_at_5,recall_at_5,mrr,median_query_latency_ms
+Q002,What does auxiliary space complexity tell us about an algorithm?,P002,P002|P001|P032|P028|P004,0.2,1.0,1.0,9.09443000000465
+Q003,Can a stack be implemented in different ways while keeping the same operations?,P003,P009|P008|P012|P003|P006,0.2,1.0,0.25,9.228922999994893
+Q004,Why can an array element be accessed directly using its index?,P004,P004|P034|P027|P026|P037,0.2,1.0,1.0,9.15250799999967
+Q005,How are nodes connected in a singly linked list?,P005,P005|P006|P007|P017|P036,0.2,1.0,1.0,9.083202999988771
+Q006,Which linked list supports traversal in both directions?,P006,P005|P006|P007|P016|P036,0.2,1.0,0.5,8.963862999991079
+Q007,How does the last node connect in a circular linked list?,P007,P007|P005|P006|P011|P024,0.2,1.0,1.0,9.187451000002511
+Q008,Which principle explains why the latest stack element is removed first?,P008,P008|P009|P030|P006|P025,0.2,1.0,1.0,9.053819000001795
+Q009,How does a program use a stack to manage recursive function calls?,P009,P009|P008|P006|P012|P003,0.2,1.0,1.0,9.648998000017173
+Q010,Where does a queue insert new elements and remove existing elements?,P010,P010|P011|P012|P008|P004,0.2,1.0,1.0,9.221762999999328
+Q011,How does a circular queue reuse array positions after deletions?,P011,P011|P010|P012|P004|P007,0.2,1.0,1.0,9.281874000009793
+Q012,What makes a deque different from an ordinary queue?,P012,P010|P012|P011|P022|P019,0.2,1.0,0.5,9.302594000018871
+Q014,What ordering condition must a binary search tree maintain?,P014,P014|P033|P013|P016|P032,0.2,1.0,1.0,8.851423000010072
+Q015,What balance condition does an AVL tree maintain at each node?,P015,P015|P014|P016|P021|P023,0.2,1.0,1.0,9.934418999989703
+Q018,"What are the main components of a graph, and how can graphs be classified?",P017,P017|P018|P019|P021|P023,0.2,1.0,1.0,10.348995000015293
+Q020,Which graph traversal visits nearby vertices before exploring more distant ones?,P019,P019|P020|P016|P017|P018,0.2,1.0,1.0,9.825473999995893
+Q021,What is the time complexity of BFS when a graph uses an adjacency list?,P019,P019|P018|P001|P020|P017,0.2,1.0,1.0,10.336085999995248
+Q022,How does DFS explore a graph and then return to earlier vertices?,P020,P020|P019|P018|P017|P016,0.2,1.0,1.0,9.019858000016256
+Q023,Which data structures can be used to implement depth-first search?,P020,P020|P019|P024|P032|P014,0.2,1.0,1.0,9.510097999992695
+Q024,What properties must a minimum spanning tree satisfy?,P021,P021|P023|P022|P014|P013,0.2,1.0,1.0,9.151125999977694
+Q027,Which tree structure stores words by sharing prefixes and supports autocomplete?,P024,P024|P016|P014|P015|P013,0.2,1.0,1.0,9.642458000001852
+Q028,How does Bubble Sort move large elements toward the end of an array?,P025,P025|P026|P030|P004|P027,0.2,1.0,1.0,9.08500599999229
+Q029,What element does Selection Sort choose during each pass?,P026,P026|P025|P030|P031|P033,0.2,1.0,1.0,8.78959900001064
+Q030,Why is Insertion Sort useful when an array is already nearly sorted?,P027,P027|P004|P025|P031|P026,0.2,1.0,1.0,9.676450000000614
+Q031,How does Merge Sort use the divide-and-conquer approach?,P028,P028|P031|P026|P030|P025,0.2,1.0,1.0,9.433411999992813
+Q032,"What role does a pivot play in Quick Sort, and what causes its worst case?",P029,P029|P031|P025|P026|P030,0.2,1.0,1.0,9.579453000014837
+Q033,What are the time and auxiliary-space complexities of in-place Heap Sort?,P030,P030|P027|P026|P025|P002,0.2,1.0,1.0,9.960268000014594
+Q036,Can linear search find a value in an unsorted collection?,P032,P032|P033|P037|P026|P025,0.2,1.0,1.0,9.394262999990133
+Q037,What is the worst-case time complexity of sequential search?,P032,P032|P033|P025|P027|P019,0.2,1.0,1.0,8.992505999998457
+Q038,Why must a collection be sorted before applying ordinary binary search?,P033,P033|P032|P026|P030|P031,0.2,1.0,1.0,9.063182999994979
+Q039,Why does binary search take logarithmic time?,P033,P033|P014|P032|P037|P001,0.2,1.0,1.0,10.313442000011719
+Q040,How does a hash function determine where a key is stored in a hash table?,P034,P034|P035|P039|P038|P040,0.2,1.0,1.0,10.932107000002134
+Q042,How does separate chaining store entries that have the same hash index?,P036,P036|P034|P035|P039|P040,0.2,1.0,1.0,9.758653999995204
+Q043,How does linear probing find an empty position after a collision?,P037,P037|P038|P032|P039|P033,0.2,1.0,1.0,8.994629000000032
+Q044,How are new positions selected in quadratic probing?,P038,P037|P038|P039|P026|P019,0.2,1.0,0.5,9.00435499997343
+Q045,How does a second hash function help resolve collisions?,P039,P039|P035|P036|P034|P038,0.2,1.0,1.0,8.727305000007846
+Q047,"Which structure provides direct indexed access, while another requires node-by-node traversal?",P004|P005,P016|P005|P006|P020|P004,0.4,1.0,0.5,9.772514000019328
+Q048,How do stack and queue removal orders differ?,P008|P010,P008|P012|P010|P011|P009,0.4,1.0,1.0,9.249815999993416
+Q049,How do breadth-first search and depth-first search differ in exploration order?,P019|P020,P019|P020|P016|P032|P033,0.4,1.0,1.0,10.033098000008067
+Q051,How do Merge Sort and Quick Sort differ in their worst-case time complexity?,P028|P029,P028|P029|P031|P025|P030,0.4,1.0,1.0,10.028771999998298
+Q052,How do linear search and binary search differ in their requirements and time complexity?,P032|P033,P032|P033|P014|P002|P037,0.4,1.0,1.0,9.862139999995634
+Q054,How does a doubly linked list improve traversal compared with a singly linked list?,P005|P006,P006|P005|P007|P036|P020,0.4,1.0,1.0,9.956552999994983
+Q055,How does AVL balancing improve on the height behaviour of an ordinary binary search tree?,P014|P015,P015|P014|P033|P038|P013,0.4,1.0,1.0,9.886706999992612
+Q057,"Which sorting method uses a heap, and which one repeatedly merges sorted subarrays?",P028|P030,P028|P030|P025|P027|P031,0.4,1.0,1.0,9.99045400001819
+Q058,How many edges are present in a spanning tree containing V vertices?,P021,P021|P023|P022|P018|P017,0.2,1.0,1.0,9.462666000018771
+Q059,Which queue design allows the array's rear index to wrap around after reaching its end?,P011,P011|P012|P010|P004|P025,0.2,1.0,1.0,9.645242000004828

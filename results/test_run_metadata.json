@@ -1,0 +1,19 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "device": "cpu",
+  "rrf_constant": 60,
+  "top_k": 5,
+  "latency_repeats_per_query": 5,
+  "passage_count": 40,
+  "query_count": 60,
+  "development_query_count": 15,
+  "evaluated_split": "test",
+  "evaluated_query_count": 45,
+  "test_query_count": 45,
+  "test_queries_scored": true,
+  "shared_relevant_passage_ids_across_splits": 0,
+  "author_passage_content_review": "completed_all_40",
+  "author_relevance_review": "completed_all_60",
+  "independent_reviewer_confirmation": "pending",
+  "results_status": "preliminary_author_reviewed_labels"
+}

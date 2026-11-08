@@ -1,0 +1,2 @@
+Method,Precision@5,Recall@5,MRR,Hit@1,Median Query Latency (ms),Index Creation Time (seconds),Model,Device,Model Loading Time (seconds),Document Embedding Time (seconds),RRF Constant
+Dense,0.23555555555555555,1.0,0.9388888888888889,0.8888888888888888,9.433411999992813,,sentence-transformers/all-MiniLM-L6-v2,cpu,4.315385213000013,0.7089754139999798,

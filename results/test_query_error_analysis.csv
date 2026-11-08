@@ -1,0 +1,17 @@
+Method,Query ID,Question,Relevant Passage,Retrieved Passages,Correct Passage Rank
+TF-IDF,Q010,Where does a queue insert new elements and remove existing elements?,P010,P040|P025|P010|P019|P032,3
+TF-IDF,Q020,Which graph traversal visits nearby vertices before exploring more distant ones?,P019,P016|P019|P020|P017|P013,2
+TF-IDF,Q022,How does DFS explore a graph and then return to earlier vertices?,P020,P019|P018|P023|P020|P017,4
+TF-IDF,Q036,Can linear search find a value in an unsorted collection?,P032,P033|P032|P038|P014|P036,2
+TF-IDF,Q039,Why does binary search take logarithmic time?,P033,P015|P014|P033|P023|P008,3
+TF-IDF,Q042,How does separate chaining store entries that have the same hash index?,P036,P035|P036|P038|P023|P034,2
+TF-IDF,Q047,"Which structure provides direct indexed access, while another requires node-by-node traversal?",P004|P005,P013|P006|P005|P004|P007,3
+TF-IDF,Q051,How do Merge Sort and Quick Sort differ in their worst-case time complexity?,P028|P029,P031|P029|P032|P027|P028,2
+Dense,Q003,Can a stack be implemented in different ways while keeping the same operations?,P003,P009|P008|P012|P003|P006,4
+Dense,Q006,Which linked list supports traversal in both directions?,P006,P005|P006|P007|P016|P036,2
+Dense,Q012,What makes a deque different from an ordinary queue?,P012,P010|P012|P011|P022|P019,2
+Dense,Q044,How are new positions selected in quadratic probing?,P038,P037|P038|P039|P026|P019,2
+Dense,Q047,"Which structure provides direct indexed access, while another requires node-by-node traversal?",P004|P005,P016|P005|P006|P020|P004,2
+Hybrid RRF,Q012,What makes a deque different from an ordinary queue?,P012,P010|P012|P011|P019|P022,2
+Hybrid RRF,Q022,How does DFS explore a graph and then return to earlier vertices?,P020,P019|P020|P018|P017|P023,2
+Hybrid RRF,Q051,How do Merge Sort and Quick Sort differ in their worst-case time complexity?,P028|P029,P031|P029|P028|P025|P027,2
