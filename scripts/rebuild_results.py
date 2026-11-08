@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import json
 import statistics
 import time
@@ -106,7 +107,7 @@ def median_latency_ms(callable_fn, question: str) -> float:
     return float(statistics.median(samples))
 
 
-def main() -> None:
+def main(split: str = "dev") -> None:
     passages = pd.read_csv(PASSAGES_PATH).fillna("")
     queries = pd.read_csv(QUERIES_PATH).fillna("")
     validate_data(passages, queries)
@@ -114,7 +115,10 @@ def main() -> None:
     documents = passages["text"].astype(str).tolist()
     document_ids = passages["doc_id"].astype(str).tolist()
     id_to_position = {doc_id: i for i, doc_id in enumerate(document_ids)}
-    dev_queries = queries[queries["split"] == "dev"].copy()
+    evaluation_queries = queries[queries["split"] == split].copy()
+    expected_count = 15 if split == "dev" else 45
+    if len(evaluation_queries) != expected_count:
+        raise ValueError(f"Expected {expected_count} {split} queries; found {len(evaluation_queries)}.")
 
     # TF-IDF baseline: fit only on the fixed passage corpus.
     vectorizer = TfidfVectorizer(
@@ -212,7 +216,7 @@ def main() -> None:
 
     for method_name, ranker in method_specs:
         records = []
-        for row in dev_queries.itertuples(index=False):
+        for row in evaluation_queries.itertuples(index=False):
             question = str(row.question)
             relevant_ids = parse_relevant_ids(row.relevant_doc_ids)
             ranked_ids = ranker(question)
@@ -243,7 +247,7 @@ def main() -> None:
             else "hybrid"
         )
         frame.to_csv(
-            RESULTS_DIR / f"{key}_dev_predictions.csv",
+            RESULTS_DIR / f"{key}_{split}_predictions.csv",
             index=False,
         )
         summary_rows.append(
@@ -302,7 +306,7 @@ def main() -> None:
         ("hybrid", "Hybrid RRF"),
     ]:
         row = summaries[summaries["Method"] == method_name]
-        row.to_csv(RESULTS_DIR / f"{key}_dev_metrics.csv", index=False)
+        row.to_csv(RESULTS_DIR / f"{key}_{split}_metrics.csv", index=False)
 
     # Shared comparison table.
     summaries[
@@ -314,7 +318,7 @@ def main() -> None:
             "Hit@1",
             "Median Query Latency (ms)",
         ]
-    ].to_csv(RESULTS_DIR / "dev_method_comparison.csv", index=False)
+    ].to_csv(RESULTS_DIR / f"{split}_method_comparison.csv", index=False)
 
     # Per-question ranking errors (not ranked first).
     error_records = []
@@ -343,7 +347,7 @@ def main() -> None:
                 )
 
     pd.DataFrame(error_records).to_csv(
-        RESULTS_DIR / "dev_query_error_analysis.csv",
+        RESULTS_DIR / f"{split}_query_error_analysis.csv",
         index=False,
     )
 
@@ -355,23 +359,26 @@ def main() -> None:
         "latency_repeats_per_query": LATENCY_REPEATS,
         "passage_count": len(passages),
         "query_count": len(queries),
-        "development_query_count": len(dev_queries),
+        "development_query_count": int((queries["split"] == "dev").sum()),
+        "evaluated_split": split,
+        "evaluated_query_count": len(evaluation_queries),
         "test_query_count": int((queries["split"] == "test").sum()),
-        "test_queries_scored": False,
+        "test_queries_scored": split == "test",
         "shared_relevant_passage_ids_across_splits": 0,
+        "author_passage_content_review": "completed_all_40",
         "author_relevance_review": "completed_all_60",
         "independent_reviewer_confirmation": "pending",
         "results_status": "preliminary_author_reviewed_labels",
     }
-    (RESULTS_DIR / "dev_run_metadata.json").write_text(
+    (RESULTS_DIR / f"{split}_run_metadata.json").write_text(
         json.dumps(metadata, indent=2) + "\n",
         encoding="utf-8",
     )
 
-    print("Development experiment rebuild completed.")
+    print(f"{split.title()} experiment evaluation completed.")
     print(f"Passages: {len(passages)}")
-    print(f"Development queries scored: {len(dev_queries)}")
-    print("Held-out test queries scored: 0")
+    print(f"Development queries scored in this run: {int(split == \"dev\") * len(evaluation_queries)}")
+    print(f"Test queries scored in this run: {int(split == \"test\") * len(evaluation_queries)}")
     print(summaries[
         ["Method", "Precision@5", "Recall@5", "MRR", "Hit@1",
          "Median Query Latency (ms)"]
@@ -380,4 +387,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Evaluate retrieval on one fixed data split.")
+    parser.add_argument("--split", choices=("dev", "test"), default="dev")
+    args = parser.parse_args()
+    main(args.split)
