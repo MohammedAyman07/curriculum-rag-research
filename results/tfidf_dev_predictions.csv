@@ -1,16 +1,16 @@
 query_id,question,relevant_doc_ids,retrieved_doc_ids,precision_at_5,recall_at_5,mrr,median_query_latency_ms
-Q001,How does an algorithm's running time change as input size increases?,P001,P001|P002|P023|P037|P020,0.2,1.0,1.0,1.4034420000825776
-Q004,Why can an array element be accessed directly using its index?,P004,P004|P003|P034|P026|P028,0.2,1.0,1.0,1.4370129999861092
-Q006,Which linked list supports traversal in both directions?,P006,P006|P007|P005|P003|P036,0.2,1.0,1.0,1.3052890001290507
-Q008,Which principle explains why the latest stack element is removed first?,P008,P008|P010|P020|P013|P026,0.2,1.0,1.0,1.293565999958446
-Q010,Where does a queue insert new elements and remove existing elements?,P010,P040|P025|P010|P019|P032,0.2,1.0,0.3333333333333333,1.2714930001038738
-Q013,How many children can a node have in a binary tree?,P013,P014|P013|P016|P015|P030,0.2,1.0,0.5,1.2625750000552216
-Q015,What balance condition does an AVL tree maintain at each node?,P015,P015|P005|P013|P023|P014,0.2,1.0,1.0,1.2877269998625707
-Q018,"What are the main components of a graph, and how can graphs be classified?",P017,P017|P021|P014|P012|P008,0.2,1.0,1.0,1.279608000004373
-Q020,Which graph traversal visits nearby vertices before exploring more distant ones?,P019,P016|P019|P020|P013|P017,0.2,1.0,0.5,1.3057139999546052
-Q022,How does DFS explore a graph and then return to earlier vertices?,P020,P019|P018|P023|P020|P017,0.2,1.0,0.25,1.30865599999197
-Q025,How does Prim's algorithm decide which edge to add to its growing tree?,P022,P022|P023|P021|P002|P001,0.2,1.0,1.0,1.2654060001295875
-Q027,Which tree structure stores words by sharing prefixes and supports autocomplete?,P024,P024|P013|P006|P003|P004,0.2,1.0,1.0,1.2448659999790834
-Q031,How does Merge Sort use the divide-and-conquer approach?,P028,P028|P031|P023|P035|P001,0.2,1.0,1.0,1.2597250001817883
-Q038,Why must a collection be sorted before applying ordinary binary search?,P033,P015|P033|P014|P030|P020,0.2,1.0,0.5,1.2606699999651028
-Q040,How does a hash function determine where a key is stored in a hash table?,P034,P034|P035|P039|P040|P038,0.2,1.0,1.0,1.2602239999068843
+Q001,How does an algorithm's running time change as input size increases?,P001,P001|P002|P023|P037|P020,0.2,1.0,1.0,0.7289950000028966
+Q013,How many children can a node have in a binary tree?,P013,P014|P013|P016|P015|P030,0.2,1.0,0.5,0.6824390000019775
+Q016,In which tree traversal is the root processed between its left and right subtrees?,P016,P016|P015|P013|P014|P027,0.2,1.0,1.0,0.6728909999935695
+Q017,What is the difference between preorder and postorder traversal?,P016,P016|P015|P013|P010|P008,0.2,1.0,1.0,0.6586150000202906
+Q019,How much memory does an adjacency matrix need for a graph with V vertices?,P018,P018|P019|P021|P017|P020,0.2,1.0,1.0,0.6642550000037772
+Q025,How does Prim's algorithm decide which edge to add to its growing tree?,P022,P022|P023|P021|P002|P001,0.2,1.0,1.0,0.662191999992956
+Q026,How does Kruskal's algorithm avoid adding an edge that creates a cycle?,P023,P023|P022|P007|P021|P018,0.2,1.0,1.0,0.6572119999930237
+Q034,What happens to equal-key records when a stable sorting algorithm is used?,P031,P031|P023|P028|P037|P006,0.2,1.0,1.0,0.6632930000023407
+Q035,"Which sorting algorithms are commonly stable, and which are generally unstable?",P031,P031|P013|P010|P039|P023,0.2,1.0,1.0,0.6601580000165086
+Q041,What happens when two different keys produce the same hash-table index?,P035,P035|P036|P034|P040|P038,0.2,1.0,1.0,0.681056000018998
+Q046,Why might a hash table need to be rebuilt with a larger capacity?,P040,P034|P035|P040|P038|P039,0.2,1.0,0.3333333333333333,0.6687629999930778
+Q050,How do Prim's and Kruskal's algorithms construct a minimum spanning tree differently?,P022|P023,P021|P022|P023|P001|P014,0.4,1.0,0.5,0.6594959999972616
+Q053,"How do collisions and a high load factor affect a hash table, and why is rehashing useful?",P035|P040,P040|P035|P034|P036|P038,0.4,1.0,1.0,0.664485999976705
+Q056,How does an adjacency matrix represent connections between graph vertices?,P018,P018|P017|P019|P023|P020,0.2,1.0,1.0,0.6579340000030243
+Q060,What is the difference between the structure of a binary tree and the order used to visit its nodes?,P013|P016,P013|P014|P015|P024|P023,0.2,0.5,1.0,0.6673400000067886

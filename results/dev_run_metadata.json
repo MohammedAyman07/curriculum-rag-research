@@ -1,0 +1,15 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "device": "cpu",
+  "rrf_constant": 60,
+  "top_k": 5,
+  "latency_repeats_per_query": 5,
+  "passage_count": 40,
+  "query_count": 60,
+  "development_query_count": 15,
+  "test_query_count": 45,
+  "test_queries_scored": false,
+  "shared_relevant_passage_ids_across_splits": 0,
+  "human_label_confirmation": "pending",
+  "results_status": "preliminary_ai_reviewed_labels"
+}

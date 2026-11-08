@@ -1,2 +1,2 @@
-Method,Precision@5,Recall@5,MRR,Median Query Latency (ms),Index Creation Time (seconds)
-TF-IDF,0.20000000000000007,1.0,0.8055555555555555,1.279608000004373,0.018640561999973215
+Method,Precision@5,Recall@5,MRR,Hit@1,Median Query Latency (ms),Index Creation Time (seconds),Model,Device,Model Loading Time (seconds),Document Embedding Time (seconds),RRF Constant
+TF-IDF,0.22666666666666668,0.9666666666666667,0.888888888888889,0.8,0.6642550000037772,0.009215796999995973,,,,,

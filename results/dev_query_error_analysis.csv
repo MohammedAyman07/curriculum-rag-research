@@ -1,8 +1,6 @@
 Method,Query ID,Question,Relevant Passage,Retrieved Passages,Correct Passage Rank
-TF-IDF,Q010,Where does a queue insert new elements and remove existing elements?,P010,P040|P025|P010|P019|P032,3
 TF-IDF,Q013,How many children can a node have in a binary tree?,P013,P014|P013|P016|P015|P030,2
-TF-IDF,Q020,Which graph traversal visits nearby vertices before exploring more distant ones?,P019,P016|P019|P020|P013|P017,2
-TF-IDF,Q022,How does DFS explore a graph and then return to earlier vertices?,P020,P019|P018|P023|P020|P017,4
-TF-IDF,Q038,Why must a collection be sorted before applying ordinary binary search?,P033,P015|P033|P014|P030|P020,2
-Dense,Q006,Which linked list supports traversal in both directions?,P006,P005|P006|P007|P016|P036,2
-Hybrid,Q022,How does DFS explore a graph and then return to earlier vertices?,P020,P019|P020|P018|P017|P023,2
+TF-IDF,Q046,Why might a hash table need to be rebuilt with a larger capacity?,P040,P034|P035|P040|P038|P039,3
+TF-IDF,Q050,How do Prim's and Kruskal's algorithms construct a minimum spanning tree differently?,P022|P023,P021|P022|P023|P001|P014,2
+Hybrid RRF,Q046,Why might a hash table need to be rebuilt with a larger capacity?,P040,P034|P040|P038|P035|P039,2
+Hybrid RRF,Q050,How do Prim's and Kruskal's algorithms construct a minimum spanning tree differently?,P022|P023,P021|P022|P023|P014|P016,2
