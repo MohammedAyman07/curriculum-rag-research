@@ -25,17 +25,17 @@ Current split validation: 15 development questions, 45 test questions, and zero 
 2. Dense semantic retrieval using `sentence-transformers/all-MiniLM-L6-v2`.
 3. Hybrid retrieval using Reciprocal Rank Fusion (RRF), with rank constant 60.
 
-## Annotation and research status
+## Annotation and review status
 
-This is a small pilot benchmark, not a peer-reviewed or independently validated benchmark. AI assistance was used when preparing the initial passage/question material and provisional relevance mappings. The mappings received an AI-assisted consistency check against the passage text; this is not a substitute for independent human annotation.
+This is a small pilot benchmark, not a peer-reviewed or independently validated benchmark. AI assistance was used when preparing the initial passage/question material and provisional relevance mappings.
 
-The audit file records concise mapping statuses. Q056 is marked `CORRECTED_MATCH` and maps only to P018, which directly describes adjacency-matrix rows, columns, and entries. Q038 is marked `WORDING_CHECK` because P033 describes binary search on sorted collections but could explain more explicitly why the ordering is required.
+The project author has reviewed all 60 relevance mappings against the passage text: **59 were confirmed by the author and one (Q038) was flagged for revision**. For Q038, P033 describes binary search on sorted input but does not clearly explain why sorted order is necessary. The relevance ID remains P033; the passage needs a clearer explanation before that question can be treated as fully supported.
 
-**Independent human confirmation of all 60 relevance mappings is pending.** Until a person checks and confirms the mappings, development metrics are preliminary and must not be described as human-validated findings.
+This author review is not independent annotation. **Independent reviewer confirmation has not yet been completed.** The audit records author-review status separately from the pending independent confirmation.
 
 ## Results and evaluation boundary
 
-The current development result files under `results/` were regenerated using the passage-grouped split. Only the 15 development questions are scored. The 45 test questions remain held out and have not been scored. Because the development set is small and the relevance mappings are awaiting human confirmation, the metrics should be treated as preliminary rather than generalizable evidence.
+The current development result files under `results/` were generated using the passage-grouped split. Only the 15 development questions are scored. The 45 test questions remain held out and have not been scored. Because the dataset is small and Q038 remains flagged for revision, the metrics should be treated as preliminary rather than generalizable evidence.
 
 ## Technologies
 
