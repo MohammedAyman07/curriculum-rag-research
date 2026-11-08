@@ -1,0 +1,2 @@
+Method,Model,Device,Precision@5,Recall@5,MRR,Median Query Latency (ms),Model Loading Time (seconds),Document Embedding Time (seconds)
+Dense Semantic Retrieval,sentence-transformers/all-MiniLM-L6-v2,cpu,0.20000000000000007,1.0,0.9666666666666667,44.36529800000244,5.42842813499999,2.2083051889999865
