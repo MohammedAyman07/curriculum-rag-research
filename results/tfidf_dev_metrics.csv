@@ -1,0 +1,2 @@
+Method,Precision@5,Recall@5,MRR,Median Query Latency (ms),Index Creation Time (seconds)
+TF-IDF,0.20000000000000007,1.0,0.8055555555555555,1.279608000004373,0.018640561999973215
