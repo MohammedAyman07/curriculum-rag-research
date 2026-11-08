@@ -9,7 +9,7 @@ How do TF-IDF keyword retrieval, dense semantic retrieval, and Reciprocal Rank F
 ## Dataset
 
 - 40 original pilot passages covering Data Structures and Algorithms.
-- 60 evaluation questions with provisional passage relevance mappings.
+- 60 evaluation questions with passage relevance mappings.
 - 15 development questions and 45 held-out test questions.
 - Source files: `data/passages.csv`, `data/queries.csv`, and `data/relevance_audit.csv`.
 
@@ -29,13 +29,13 @@ Current split validation: 15 development questions, 45 test questions, and zero 
 
 This is a small pilot benchmark, not a peer-reviewed or independently validated benchmark. AI assistance was used when preparing the initial passage/question material and provisional relevance mappings.
 
-The project author has reviewed all 60 relevance mappings against the passage text: **59 were confirmed by the author and one (Q038) was flagged for revision**. For Q038, P033 describes binary search on sorted input but does not clearly explain why sorted order is necessary. The relevance ID remains P033; the passage needs a clearer explanation before that question can be treated as fully supported.
+The project author has reviewed all 60 relevance mappings against the passage text: **all 60 are marked author-confirmed**. During review, passage P033 (Binary Search) was expanded to explain why sorted order allows binary search to eliminate one half of the remaining collection. The updated passage text is reflected consistently in the corpus and in audit entries Q038, Q039, and Q052.
 
-This author review is not independent annotation. **Independent reviewer confirmation has not yet been completed.** The audit records author-review status separately from the pending independent confirmation.
+Author review is not independent annotation. **Independent reviewer confirmation has not yet been completed**, and the audit keeps that status separate from author review.
 
 ## Results and evaluation boundary
 
-The current development result files under `results/` were generated using the passage-grouped split. Only the 15 development questions are scored. The 45 test questions remain held out and have not been scored. Because the dataset is small and Q038 remains flagged for revision, the metrics should be treated as preliminary rather than generalizable evidence.
+The development results are rebuilt from the current passage corpus and grouped split. Only the 15 development questions are scored. The 45 test questions remain held out and are not scored by the rebuild workflow. This is a small pilot dataset, so metrics should be interpreted as preliminary rather than generalizable evidence.
 
 ## Technologies
 

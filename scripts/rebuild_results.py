@@ -359,8 +359,9 @@ def main() -> None:
         "test_query_count": int((queries["split"] == "test").sum()),
         "test_queries_scored": False,
         "shared_relevant_passage_ids_across_splits": 0,
-        "human_label_confirmation": "pending",
-        "results_status": "preliminary_ai_reviewed_labels",
+        "author_relevance_review": "completed_all_60",
+        "independent_reviewer_confirmation": "pending",
+        "results_status": "preliminary_author_reviewed_labels",
     }
     (RESULTS_DIR / "dev_run_metadata.json").write_text(
         json.dumps(metadata, indent=2) + "\n",
